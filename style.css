@@ -1,0 +1,221 @@
+/* 
+========================
+SHARED STYLES
+========================
+ */
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #242742;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: hsl(235, 18%, 26%);
+}
+
+#sign-up,
+#success-message {
+  background-color: #fff;
+}
+
+h1,
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+#sign-up-form > form,
+article#sign-up-description {
+  margin: 40px 0;
+}
+
+input,
+button {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+/* 
+========================
+SIGN UP FORM SECTION
+========================
+ */
+#sign-up {
+  width: 100vw;
+  max-width: 475px;
+}
+
+figure {
+  width: 100%;
+  aspect-ratio: 375 / 284;
+}
+
+#image {
+  width: 100%;
+  aspect-ratio: 375 / 284;
+  background-image: url(assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#sign-up-form {
+  padding: 20px;
+}
+
+#sign-up-form * {
+  margin: 20px 0;
+}
+
+ul {
+  list-style-image: url(assets/images/icon-list.svg);
+  padding-left: 30px;
+}
+
+label {
+  display: block;
+}
+
+#sign-up-form > form * {
+  margin: 5px 0;
+}
+
+input {
+  border: 1px solid #00000055;
+}
+
+button {
+  color: #fff;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  font-weight: 700;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #eb6d64, #fd6e64, #ff6257);
+  cursor: pointer;
+}
+
+/* 
+========================
+SUCCESS MESSAGE SECTION
+========================
+ */
+#success-message {
+  width: 100vw;
+  padding: 40px 20px;
+}
+
+#success-message * {
+  margin: 20px 0;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+#input-value {
+  font-weight: 700;
+}
+
+/* 
+========================
+FOOTER STYLES
+========================
+ */
+.attribution {
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  margin: 10px;
+}
+.attribution a {
+  color: #d5f07b;
+}
+
+/* 
+========================
+ERROR MESSAGE
+========================
+ */
+#error-message {
+  color: #ff6257;
+  float: right;
+  margin: 10px;
+}
+
+.error-input {
+  color: #ff6257;
+  background-color: #ff625722;
+  border: 1px solid #ff6257;
+}
+
+/* 
+========================
+BREAKPOINTS
+========================
+ */
+
+@media (min-width: 475px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #success-message {
+    max-width: 475px;
+    padding: 40px;
+    border-radius: 30px;
+  }
+
+  #success-icon {
+    margin: 0;
+  }
+}
+
+@media (min-width: 875px) {
+  #sign-up {
+    width: 850px;
+    max-width: 850px;
+    aspect-ratio: 850 / 600;
+    padding: 30px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #sign-up-form {
+    width: 50%;
+    height: 100%;
+  }
+
+  figure {
+    width: 50%;
+    height: 100%;
+    padding-left: 30px;
+  }
+
+  #image {
+    height: 100%;
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    aspect-ratio: 400 / 593;
+  }
+}
